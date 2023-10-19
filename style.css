@@ -59,6 +59,7 @@ body * {
   max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
+  
 }
 
 /*img é display inline então não se aplica margin
