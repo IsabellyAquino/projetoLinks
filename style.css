@@ -52,10 +52,11 @@ body * {
 
 /* height: 712px; geralmente não utiliza altura, 
  pois altura tem que ser fluida
- e define margem em cima 56px, na direita e esquerda auto
+ e define margem em cima 100px ate que alcance o maximo de 588,na direita e esquerda auto
  e embaixo 0px*/
 #container {
-  width: 360px;
+  width: 100px;
+  max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
