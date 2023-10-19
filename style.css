@@ -1,0 +1,183 @@
+/* reseta margens do navegador, preenchimento interno e a medida das caixas conforme o definido*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* define cor de texto
+fundo, cor das caixas*/
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 00.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+   --switch-bg-url: url(./assets/sun.svg);
+}
+
+/* define fundo como imagem
+  background-image: url(./assets/assets/bg-mobile.jpg);
+
+  //define repetição da imagen
+  background-repeat: no-repeat;
+
+  //define posicionamento
+  background-position: top center;
+  
+  //define tamanho, neste caso cobre tela
+  background-size: cover;*/
+
+/*atalho para propriedades*/
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+/*aplica para todos elementos de fonte dentro do body */
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+/* height: 712px; geralmente não utiliza altura, 
+ pois altura tem que ser fluida
+ e define margem em cima 56px, na direita e esquerda auto
+ e embaixo 0px*/
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+/*img é display inline então não se aplica margin
+define-se o "pai" desta forma*/
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  padding: 8px;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  
+  margin: 4px auto;
+}
+
+#switch button{
+  width: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+
+  /*faz posicionamento de camadas*/
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button{
+  right: 0;
+  left: initial;
+}
+
+#switch span{
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*tirando pontos dos links,
+dislpay deixa elementos flexiveis,
+direciona em colunas,
+e aplica espaço de 8px com gap*/
+ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0;
+}
+
+/*define o conteudo como central com justify em relação vertical,
+define o conteudo como central com align em relação horizontal do display,define cor de fundo. 255rgba define como branco
+e aplica um embaçado no elemento 
+*/
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: backgorund 0.2s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+  display: flex;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+  transform: background 0.2s;
+}
+
+#social-links a:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+}
