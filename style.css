@@ -42,6 +42,7 @@ fundo, cor das caixas*/
 /*atalho para propriedades*/
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 /*aplica para todos elementos de fonte dentro do body */
@@ -59,7 +60,7 @@ body * {
   max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
-  
+
 }
 
 /*img é display inline então não se aplica margin
@@ -182,4 +183,15 @@ footer {
   padding: 24px;
   text-align: center;
   font-size: 14px;
+}
+
+/*media queries adiciona regras para fundo */
+@media (min-width: 700px){
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
