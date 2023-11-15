@@ -3,6 +3,7 @@
 <p align="center">
 Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB. <br/>
 </p>
+<p align="center"> Para acessar o projeto clique no link a seguir: https://isabellyaquino.github.io/projetoLinks/ </p>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
